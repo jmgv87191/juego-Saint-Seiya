@@ -1,0 +1,462 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+:root {
+  --red: #ff2e63;
+  --black: #252a34;
+  --blue: #08d9d6;
+  --white: #eaeaea;
+  --gold: rgb(206, 194, 24);
+  --silver: rgb(136, 133, 133); }
+
+body {
+  background: white;
+  overflow-x: hidden;
+  font-family: Grandstander;
+  font-size: 16px; }
+
+.go-top {
+  position: fixed;
+  bottom: 100px;
+  right: -100px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--gold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  transition: 400ms;
+  z-index: 9999; }
+  .go-top span {
+    font-size: 50px;
+    height: 60px; }
+    .go-top span:hover {
+      color: var(--white); }
+  .go-top:hover {
+    background: var(--gold); }
+
+body header {
+  position: relative;
+  width: 100%; }
+  body header .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999; }
+    body header .menu .logo-box {
+      margin-left: 60px; }
+      body header .menu .logo-box h1,
+      body header .menu .logo-box a {
+        text-decoration: none;
+        font-size: 35px;
+        font-weight: bold;
+        color: var(--black); }
+      body header .menu .logo-box .btn-menu > .fa-bars {
+        display: none; }
+    body header .menu .list-container {
+      margin-right: 20px; }
+      body header .menu .list-container .lists {
+        display: flex; }
+        body header .menu .list-container .lists li {
+          list-style: none; }
+          body header .menu .list-container .lists li a {
+            text-decoration: none;
+            margin: 0px 10px;
+            padding: 8px;
+            color: var(--black);
+            border-radius: 24px;
+            font-size: 16px;
+            transition: .3s; }
+            body header .menu .list-container .lists li a.activo {
+              background: var(--gold);
+              color: white; }
+            body header .menu .list-container .lists li a:hover {
+              background: var(--gold);
+              color: white; }
+  body header .img-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/saint-seiya.png);
+    background-size: cover;
+    background-attachment: fixed; }
+    body header .img-header .welcome {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      body header .img-header .welcome h2 {
+        font-size: 50px;
+        color: white;
+        font-weight: border; }
+      body header .img-header .welcome hr {
+        width: 400px;
+        height: 2px;
+        background: white;
+        border: none;
+        margin-top: 5px; }
+      body header .img-header .welcome p {
+        font-size: 20px;
+        color: white;
+        margin-top: 20px; }
+      body header .img-header .welcome button {
+        width: 170px;
+        height: 40px;
+        background: var(--gold);
+        border-radius: 24px;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: .5s; }
+        body header .img-header .welcome button:hover {
+          background: var(--silver); }
+
+@media only screen and (max-width: 900px) {
+  body header .menu .logo-box .btn-menu .fa-bars {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer; }
+  body header .menu .list-container {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: white; }
+    body header .menu .list-container .lists {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-top: 5px solid var(--gold); }
+      body header .menu .list-container .lists li {
+        width: 90%;
+        margin: 10px 0;
+        border-bottom: 1px solid var(--gold);
+        text-align: center; }
+        body header .menu .list-container .lists li a {
+          margin-bottom: 100px;
+          background: none;
+          color: var(--black);
+          font-size: 20px;
+          margin-bottom: 10px; }
+          body header .menu .list-container .lists li a.activo {
+            background: none;
+            color: var(--gold); }
+          body header .menu .list-container .lists li a:hover {
+            background: none;
+            color: var(--gold); } }
+@media only screen and (max-width: 700px) {
+  body header .img-header .welcome h2 {
+    font-size: 30px; }
+  body header .img-header .welcome button {
+    width: 130px;
+    font-size: 15px; }
+  body main .our-proyects .ejeZproject .project-img img {
+    width: 80%;
+    margin-bottom: 30px; }
+  body main .testimonios .box-testimonios .card-testimonio .testimonio-text {
+    width: 100%;
+    font-size: 5px; } }
+main .acerca-de {
+  width: 100%;
+  margin-top: 120px; }
+  main .acerca-de .info-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    main .acerca-de .info-container h2 {
+      font-size: 50px;
+      font-weight: bolder;
+      color: var(--black);
+      text-align: center;
+      margin-bottom: 20px; }
+    main .acerca-de .info-container p {
+      text-align: center;
+      font-size: 17px;
+      color: var(--black);
+      line-height: 35px;
+      margin: 10px 0px; }
+    main .acerca-de .info-container .about-gallery {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 50px 0px; }
+      main .acerca-de .info-container .about-gallery img {
+        width: calc(33.33% - 10px);
+        height: 300px;
+        object-fit: cover;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer; }
+    main .acerca-de .info-container .about-more {
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      main .acerca-de .info-container .about-more button {
+        width: 120px;
+        height: 40px;
+        background: var(--gold);
+        border-radius: 24px;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: .5s; }
+        main .acerca-de .info-container .about-more button:hover {
+          background: var(--silver); }
+main .our-proyects {
+  width: 100%;
+  height: 100%;
+  background: url(../img/bgcamus.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 100px; }
+  main .our-proyects .deg-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  main .our-proyects .ejeZproject {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    main .our-proyects .ejeZproject .container-proyect {
+      width: 90%;
+      margin: auto;
+      padding-top: 100px; }
+      main .our-proyects .ejeZproject .container-proyect .project-title {
+        border: 2px solid white;
+        padding: 10px;
+        text-align: center;
+        width: 50%;
+        margin: auto; }
+        main .our-proyects .ejeZproject .container-proyect .project-title h2 {
+          font-size: 40px;
+          color: white;
+          font-weight: bolder; }
+        main .our-proyects .ejeZproject .container-proyect .project-title hr {
+          background: white;
+          width: 50%;
+          margin: auto; }
+    main .our-proyects .ejeZproject .project-img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 80px;
+      padding-bottom: 100px; }
+      main .our-proyects .ejeZproject .project-img img {
+        width: calc(30% - 10px);
+        margin: 10px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer; }
+main .testimonios {
+  width: 100%;
+  margin-top: 120px; }
+  main .testimonios .testimonios-title {
+    width: 50%;
+    margin: auto;
+    text-align: center; }
+    main .testimonios .testimonios-title h2 {
+      font-size: 50px;
+      color: var(--black);
+      font-weight: normal;
+      margin-bottom: 10px; }
+    main .testimonios .testimonios-title hr {
+      width: 60%;
+      margin: auto;
+      height: 3px;
+      background: var(--black);
+      border: none; }
+  main .testimonios .box-testimonios {
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    main .testimonios .box-testimonios .card-testimonio {
+      width: 45%;
+      margin: 20px; }
+      main .testimonios .box-testimonios .card-testimonio .card-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        main .testimonios .box-testimonios .card-testimonio .card-img img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          cursor: pointer;
+          margin-bottom: 20px; }
+    main .testimonios .box-testimonios .testimonio-text {
+      width: 100%;
+      border: 2px solid var(--red);
+      padding: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 200ms; }
+      main .testimonios .box-testimonios .testimonio-text h4 {
+        color: var(--red);
+        font-weight: normal;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+        transition: 200ms; }
+      main .testimonios .box-testimonios .testimonio-text p {
+        font-size: 19px;
+        color: var(--black);
+        text-align: center;
+        line-height: 35px;
+        transition: 200ms; }
+      main .testimonios .box-testimonios .testimonio-text:hover {
+        border: 2px solid var(--silver); }
+        main .testimonios .box-testimonios .testimonio-text:hover h4 {
+          color: var(--silver); }
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/Galaxia-de-Andromeda.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+  footer .deg-footer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); }
+  footer .ejezfooter {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    footer .ejezfooter .footer-content {
+      width: 90%;
+      padding-top: 100px;
+      margin: auto; }
+      footer .ejezfooter .footer-content .footer-title {
+        width: 50%;
+        margin: auto;
+        border: 2px solid white;
+        padding: 20px; }
+        footer .ejezfooter .footer-content .footer-title h2 {
+          text-align: center;
+          color: white;
+          font-size: 30px;
+          font-weight: normal; }
+        footer .ejezfooter .footer-content .footer-title hr {
+          width: 80%;
+          margin: 20px auto;
+          background: white;
+          margin-bottom: 0px; }
+      footer .ejezfooter .footer-content .formulario-content {
+        width: 70%;
+        background: white;
+        border-radius: 20px;
+        border: 2px solid var(--gold);
+        margin: 50px auto;
+        padding: 30px; }
+        footer .ejezfooter .footer-content .formulario-content #formulario {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 20px; }
+          footer .ejezfooter .footer-content .formulario-content #formulario label {
+            text-align: center;
+            color: var(--black);
+            font-size: 22px;
+            margin: 30px 0px 10px 0px; }
+          footer .ejezfooter .footer-content .formulario-content #formulario input {
+            width: 50%;
+            height: 40px;
+            margin: auto;
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            outline: none;
+            font-size: 17px;
+            color: var(--black);
+            padding: 5px; }
+          footer .ejezfooter .footer-content .formulario-content #formulario textarea {
+            width: 50%;
+            height: 200px;
+            margin: auto;
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            outline: none;
+            font-size: 17px;
+            color: var(--black);
+            padding: 20px; }
+          footer .ejezfooter .footer-content .formulario-content #formulario .send {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 40px auto;
+            text-align: center; }
+            footer .ejezfooter .footer-content .formulario-content #formulario .send button {
+              width: 120px;
+              height: 40px;
+              background: var(--gold);
+              border-radius: 24px;
+              border: none;
+              outline: none;
+              font-size: 22px;
+              color: white;
+              text-align: center;
+              margin-top: 20px;
+              cursor: pointer;
+              transition: .5s; }
+              footer .ejezfooter .footer-content .formulario-content #formulario .send button:hover {
+                background: var(--silver); }
+          footer .ejezfooter .footer-content .formulario-content #formulario .mensaje-form {
+            text-align: center; }
+    footer .ejezfooter .footer-text {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      border-top: 5px solid white;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white; }
+      footer .ejezfooter .footer-text p {
+        font-size: 20px; }
+
+/*# sourceMappingURL=estilos.css.map */

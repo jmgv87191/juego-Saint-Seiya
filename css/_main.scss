@@ -1,0 +1,203 @@
+main{
+
+    .acerca-de{
+        width: 100%;
+        margin-top: 120px;
+        .info-container{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            h2{
+                font-size: 50px;
+                font-weight: bolder;
+                color: var(--black);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p{
+                text-align: center;
+                font-size: 17px;
+                color: var(--black);
+                line-height: 35px;
+                margin: 10px 0px;
+            }
+            .about-gallery{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 50px 0px;
+                img{
+                    width: calc(33.33% - 10px);
+                    height: 300px;
+                    object-fit: cover;
+                    margin: 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+            .about-more{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button{
+                    width: 120px;
+                    height: 40px;
+                    background: var(--gold);
+                    border-radius: 24px;
+                    border: none;
+                    outline: none;
+                    font-size: 22px;
+                    color: white;
+                    text-align: center;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover{
+                        background: var(--silver);
+                    }
+                }
+            }
+        }
+    }
+
+    .our-proyects{
+        width: 100%;
+        height: 100%;
+        background: url(../img/bgcamus.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        margin-top: 100px;
+        .deg-background{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .ejeZproject{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .container-proyect{
+                width: 90%;
+                margin: auto;
+                padding-top: 100px;
+                .project-title{
+                    border: 2px solid white;
+                    padding: 10px;
+                    text-align: center;
+                    width: 50%;
+                    margin: auto;
+                    h2{
+                        font-size: 40px;
+                        color: white;
+                        font-weight: bolder;
+                    }
+                    hr{
+                        background: white;
+                        width: 50%;
+                        margin: auto;
+                    }
+                }
+            }
+            .project-img{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 80px;
+                padding-bottom: 100px;
+                img{
+                    width: calc(30% - 10px);
+                    margin: 10px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+
+    .testimonios{
+        width: 100%;
+        margin-top: 120px;
+        .testimonios-title{
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            h2{
+                font-size: 50px;
+                color: var(--black);
+                font-weight: normal;
+                margin-bottom: 10px;
+            }
+            hr{
+                width: 60%;
+                margin: auto;
+                height: 3px;
+                background: var(--black);
+                border: none;
+            }
+        }
+        .box-testimonios{
+            width: 90%;
+            margin: 80px auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .card-testimonio{
+                width: 45%;
+                margin: 20px;
+                .card-img{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        cursor: pointer;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .testimonio-text{
+                width: 100%;
+                border: 2px solid var(--red);
+                padding: 20px;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: 200ms;
+                h4{
+                    color: var(--red);
+                    font-weight: normal;
+                    font-size: 30px;
+                    text-align: center;
+                    margin-bottom:20px ;
+                    transition: 200ms;
+
+                }
+                p{
+                    font-size: 19px;
+                    color: var(--black);
+                    text-align: center;
+                    line-height: 35px;
+                    transition: 200ms;
+                }
+                &:hover{
+                    border: 2px solid var(--silver);
+                    h4{
+                            color: var(--silver);
+                    }
+                }
+
+            
+            }
+        }
+    }
+}
